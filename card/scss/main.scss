@@ -1,0 +1,109 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.card-container {
+  background-color: transparent;
+  perspective: 1000px;
+  width: 745px;
+  height: 426px;
+  &:hover {
+    .card-container-inner {
+      transform: rotateY(-180deg);
+    }
+  }
+  .card-container-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    .card {
+      @include center;
+      flex-direction: column;
+      background: #e3e4db;
+      border-radius: 20px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      &-front {
+        .logo {
+          width: 252px;
+          height: 252px;
+          .st {
+            stroke: #8f6593;
+            stroke-miterlimit: 10;
+            &0 {
+              fill: none;
+              stroke-width: 8;
+            }
+            &1 {
+              stroke-width: 2;
+            }
+            &2 {
+              stroke-width: 4;
+            }
+            &3 {
+              fill: none;
+              stroke-width: 8;
+              stroke-linecap: round;
+            }
+          }
+        }
+        .name-front {
+          font-size: 72px;
+          color: #aea4bf;
+        }
+      }
+      &-back {
+        align-items: start;
+        padding: 28px;
+        transform: rotateY(180deg);
+        .card-info {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          font-size: 34px;
+          color: #8f6593;
+          .card-more-info {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            height: auto;
+          }
+          .name {
+            font-size: 48px;
+            font-weight: bold;
+          }
+          .profession {
+            font-style: italic;
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+}
