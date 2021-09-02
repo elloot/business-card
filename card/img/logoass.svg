@@ -9,5 +9,5 @@
 <path d="M141.054 131.812H182.092C184.773 131.812 186.835 133.977 186.835 136.555V161.095C186.835 163.776 184.669 165.838 182.092 165.838H141.054C138.476 165.838 136.311 163.673 136.311 161.095V136.555C136.311 133.977 138.373 131.915 141.054 131.812Z" stroke="#8F6593" stroke-width="8" stroke-miterlimit="10"/>
 <path d="M119.5 142H132.5" stroke="#8F6593" stroke-width="8" stroke-miterlimit="10"/>
 <path d="M63 141.5L42 135.5" stroke="#8F6593" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
-<path d="M210 135.5L189 141.5" stroke="#8F6593" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M189 141.5L210 135.5" stroke="#8F6593" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
 </svg>
