@@ -78,30 +78,6 @@ a {
   height: 252px;
 }
 
-.card-container .card-container-inner .card-front .logo .st {
-  stroke: #8f6593;
-  stroke-miterlimit: 10;
-}
-
-.card-container .card-container-inner .card-front .logo .st0 {
-  fill: none;
-  stroke-width: 8;
-}
-
-.card-container .card-container-inner .card-front .logo .st1 {
-  stroke-width: 2;
-}
-
-.card-container .card-container-inner .card-front .logo .st2 {
-  stroke-width: 4;
-}
-
-.card-container .card-container-inner .card-front .logo .st3 {
-  fill: none;
-  stroke-width: 8;
-  stroke-linecap: round;
-}
-
 .card-container .card-container-inner .card-front .name-front {
   font-size: 72px;
   color: #aea4bf;
