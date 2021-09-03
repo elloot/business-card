@@ -98,8 +98,9 @@ a {
 
 $hair-time: 0.2s;
 $glasses-time: 0.6s;
-$brim-time: 0.3s;
+$brim-time: 0.2s;
 $rect-time: 0.2s;
+$initial-delay: 0.5s;
 
 @mixin logo-animation($length, $i, $duration, $delay) {
   #logo path:nth-child(#{$i}) {
@@ -109,47 +110,42 @@ $rect-time: 0.2s;
   }
 }
 
-@mixin name-animation($length, $i, $duration, $delay) {
-  #name-svg path:nth-child(#{$i}) {
-    stroke-dasharray: $length;
-    stroke-dashoffset: $length;
-    animation: logo-anim $duration ease-in-out $delay forwards;
-  }
-}
-
-@include logo-animation(89, 1, $hair-time, 0s);
-@include logo-animation(92, 2, $hair-time, ($hair-time + 0 * $hair-time));
-@include logo-animation(111, 3, $hair-time, (2 * $hair-time));
-@include logo-animation(75, 4, $hair-time, (3 * $hair-time));
-@include logo-animation(87, 5, $hair-time, (4 * $hair-time));
-@include logo-animation(66, 6, $hair-time, (5 * $hair-time));
-@include logo-animation(161, 7, $glasses-time, (6 * $hair-time));
-@include logo-animation(161, 8, $glasses-time, (6 * $hair-time));
+@include logo-animation(89, 1, $hair-time, 0s + $initial-delay);
+@include logo-animation(92, 2, $hair-time, $hair-time + $initial-delay);
+@include logo-animation(111, 3, $hair-time, (2 * $hair-time + $initial-delay));
+@include logo-animation(75, 4, $hair-time, (3 * $hair-time + $initial-delay));
+@include logo-animation(87, 5, $hair-time, (4 * $hair-time + $initial-delay));
+@include logo-animation(66, 6, $hair-time, (5 * $hair-time + $initial-delay));
 @include logo-animation(
-  13,
+  161,
+  7,
+  $glasses-time,
+  (6 * $hair-time + $initial-delay)
+);
+@include logo-animation(
+  161,
+  8,
+  $glasses-time,
+  (6 * $hair-time + $initial-delay)
+);
+@include logo-animation(
+  16,
   9,
   $rect-time,
-  ($hair-time + 6 * $hair-time + $glasses-time)
+  (7 * $hair-time + $glasses-time + $initial-delay)
 );
 @include logo-animation(
   22,
   10,
   $brim-time,
-  ($hair-time + 6 * $hair-time + $glasses-time + $rect-time)
+  (7 * $hair-time + $glasses-time + $rect-time + $initial-delay)
 );
 @include logo-animation(
   22,
   11,
   $brim-time,
-  ($hair-time + 6 * $hair-time + $glasses-time + $rect-time)
+  (7 * $hair-time + $glasses-time + $rect-time + $initial-delay)
 );
-
-@include name-animation(208, 1, 0.2s, 0s);
-@include name-animation(128, 2, 0.2s, 0.2s);
-@include name-animation(128, 3, 0.2s, 0.4s);
-@include name-animation(182, 4, 0.2s, 0.6s);
-@include name-animation(182, 5, 0.2s, 0.8s);
-@include name-animation(155, 6, 0.2s, 1s);
 
 @keyframes logo-anim {
   to {
