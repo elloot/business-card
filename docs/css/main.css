@@ -1,3 +1,21 @@
+@media screen and (max-width: 992px) {
+  .card-container {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .card-container .card-front {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .card-container .card-front #logo,
+  .card-container .card-front .name-front {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,12 @@
+@media screen and (max-width: 992px) {
+  .card-container {
+    transform: rotate(90deg);
+    .card-front {
+      flex-direction: row !important;
+      #logo,
+      .name-front {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
