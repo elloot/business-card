@@ -29,7 +29,7 @@ a {
   height: 426px;
   &:hover {
     .card-container-inner {
-      transform: rotateY(-180deg) /*translateZ(430px)*/;
+      transform: rotateY(-180deg);
     }
   }
   .card-container-inner {
