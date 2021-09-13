@@ -1,3 +1,12 @@
+@media screen and (max-width: 768px) {
+  .card-info {
+    font-size: 4.5vw !important;
+  }
+  .name {
+    font-size: 6vw !important;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .name-front {
     font-size: 48px !important;
@@ -107,7 +116,7 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding: 28px;
+  padding: 4%;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -126,7 +135,7 @@ a {
 }
 
 .card-container .card-container-inner .card-back .card-info .card-more-info {
-  margin-top: 20px;
+  margin-top: 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
