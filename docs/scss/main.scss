@@ -28,7 +28,7 @@ a {
   background-color: transparent;
   perspective: 1000px;
   width: 745px;
-  height: 426px;
+  aspect-ratio: 7/4;
   &:hover {
     .card-container-inner {
       transform: rotateY(-180deg);
@@ -50,9 +50,9 @@ a {
       height: 100%;
       backface-visibility: hidden;
       &-front {
-        .logo {
-          width: 252px;
-          height: 252px;
+        #logo {
+          width: 34%;
+          height: auto;
         }
         .name-container {
           width: 195px;
