@@ -1,18 +1,6 @@
-@media screen and (max-width: 992px) {
-  .card-container {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  .card-container .card-front {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
-  }
-  .card-container .card-front #logo,
-  .card-container .card-front .name-front {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+@media screen and (max-width: 576px) {
+  .name-front {
+    font-size: 48px !important;
   }
 }
 
@@ -48,7 +36,7 @@ a {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   width: 745px;
-  height: 426px;
+  aspect-ratio: 7/4;
 }
 
 .card-container:hover .card-container-inner {
@@ -91,9 +79,9 @@ a {
           backface-visibility: hidden;
 }
 
-.card-container .card-container-inner .card-front .logo {
-  width: 252px;
-  height: 252px;
+.card-container .card-container-inner .card-front #logo {
+  width: 34%;
+  height: auto;
 }
 
 .card-container .card-container-inner .card-front .name-container {
