@@ -18,6 +18,14 @@ body {
   height: 100vh;
   font-family: 'Nunito', sans-serif;
   padding: 5%;
+  flex-direction: column;
+}
+
+main {
+  @include center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 754px;
 }
 
 a {
@@ -28,7 +36,8 @@ a {
 .card-container {
   background-color: transparent;
   perspective: 1000px;
-  width: 745px;
+  max-width: 745px;
+  width: 100%;
   aspect-ratio: 7/4;
   &:hover {
     .card-container-inner {
@@ -97,6 +106,22 @@ a {
       }
     }
   }
+}
+
+.hint {
+  height: 32px;
+  width: 80%;
+  margin-top: 64px;
+  @include center;
+  border-radius: 1000px;
+  background-color: #aea4bf42;
+  span {
+    color: black;
+  }
+}
+
+.mobile-hint {
+  display: none;
 }
 
 $hair-time: 0.2s;

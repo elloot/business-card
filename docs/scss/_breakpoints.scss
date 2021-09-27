@@ -5,6 +5,12 @@
   .name {
     font-size: 6vw !important;
   }
+  .mobile-hint {
+    display: flex !important;
+  }
+  .desktop-hint {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 576px) {
   .name-front {
